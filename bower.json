@@ -1,0 +1,13 @@
+{
+  "name": "Testing",
+  "description": "Testing and up my knowledge of AngularJS",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Makarchuk Vasya"
+  ],
+  "license": "MIT",
+  "homepage": ""
+}
