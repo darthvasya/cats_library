@@ -1,5 +1,9 @@
 <h1>Homepage</h1>
-<hello-world></hello-world>
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
 	<div class="row">	
 		<div class="input-group pull-left searchIn">
 	      <input type="text" class="form-control" placeholder="Search for..." ng-model="search">

@@ -1,0 +1,20 @@
+{
+"records": [
+  {
+    "name" : "Alfreds Futterkiste",
+    "age" : "1"
+  },
+  {
+    "name" : "Vasya",
+    "age" : "2"
+  },
+  {
+    "name" : "Katy",
+    "age" : "3"
+  },
+  {
+    "name" : "Anya",
+    "age" : "4"
+  }
+]
+}

@@ -12,7 +12,63 @@
 	<script src="app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
-	<main ui-view></main>
+<body ng-controller="FirstController">
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.name + ', ' + x.age }}
+  </li>
+</ul>
+	<div class="row">	
+		<div class="input-group pull-left searchIn">
+	      <input type="text" class="form-control" placeholder="Search for..." ng-model="search">
+	      <span class="input-group-btn">
+	        <button class="btn btn-primary" type="button">Go!</button>
+	      </span>
+	    </div>
+	</div>
+	<div class="row" >
+		<div class="col-sm-6 col-md-4">
+			 
+		</div>
+		<div class="col-sm-6 col-md-4">
+			 <h2>Add new person:</h2>
+
+		</div>
+		<div class="col-sm-6 col-md-4">
+			 
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6 col-md-4">
+			 
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<input type="text" class="form-control nameIn" placeholder="Name" ng-model="name">
+			<input type="number" min="0" class="form-control" placeholder="Age" ng-model="age">
+		</div>
+	</div>
+	<div class="row" >
+		<div class="col-sm-6 col-md-4">
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<input class="btn btn-success addBtn pull-right"   type="button" value="Add" ng-click="addPerson()">
+		</div>
+		<div class="col-sm-6 col-md-4">
+		</div>
+	</div>
+
+		<div class="row">
+		  <div class="col-sm-6 col-md-4" ng-repeat="person in persons | filter: search">
+		    <div class="thumbnail">
+		      <img ng-src="{{person.img}}" alt="...">
+		      <div class="caption">
+		        <h3>Name: {{person.name}}</h3>
+		        <p>Age: {{person.age}}</p>
+		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		      </div>
+		    </div>
+		  </div>
+	</div>
 </body>
 </html>

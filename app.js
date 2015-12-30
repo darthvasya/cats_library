@@ -16,7 +16,7 @@ angular.module('studuApp', ['ui.router'])
 		});
 })
 
-.controller('FirstController', ['$scope', '$http', function($scope){
+.controller('FirstController',  function($scope, $http){
 	$scope.test = 'Hello';
 
 	$scope.persons = [
@@ -36,13 +36,16 @@ angular.module('studuApp', ['ui.router'])
 		 "img": 'images/cat2.png'
 		}
 	];
-
+	 $http.get("info.json")
+    .then(function(response) {
+    	$scope.names = response.data.records;
+    });
 	$scope.addPerson = function() {
 		$scope.persons.push({id: 0,name: $scope.name, age: $scope.age, img: 'images/cat3.png'});
 		$scope.name = '';
 		$scope.age = 0;
 	};
-}])
+})
 .directive('helloWorld', function(){
 	return {
 		template: 'Hello World'
