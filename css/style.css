@@ -9,3 +9,23 @@
 .nameIn{
 	margin-bottom: 5px; 
 }
+.hidden{
+	display: none;
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 4s;
+}

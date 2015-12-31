@@ -17,29 +17,18 @@ angular.module('studuApp', ['ui.router'])
 })
 
 .controller('FirstController',  function($scope, $http){
-	$scope.test = 'Hello';
+	$scope.visible = true;
+	$scope.rotateCats = false;
+	$scope.test = 'Hide';
+	
 
-	$scope.persons = [
-		{"id": 0,
-		 "name": "Vasya",
-		 "age": 1,
-		 "img": 'images/cat0.png'	
-		},
-		{"id": 1,
-		 "name": "Anya",
-		 "age": 2,
-		 "img": 'images/cat1.png'
-		},
-		{"id": 2,
-		 "name": "Natasha",
-		 "age": 3,
-		 "img": 'images/cat2.png'
-		}
-	];
+	
 	 $http.get("info.json")
     .then(function(response) {
-    	$scope.names = response.data.records;
+    	$scope.persons = response.data.records;
     });
+
+   
 	$scope.addPerson = function() {
 		$scope.persons.push({id: 0,name: $scope.name, age: $scope.age, img: 'images/cat3.png'});
 		$scope.name = '';

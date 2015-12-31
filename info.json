@@ -1,20 +1,28 @@
 {
 "records": [
   {
+    "id": 0,
     "name" : "Alfreds Futterkiste",
-    "age" : "1"
+    "age" : "1",
+     "img": "images/cat0.png"
   },
   {
+    "id": 1,
     "name" : "Vasya",
-    "age" : "2"
+    "age" : "2",
+     "img": "images/cat1.png"
   },
   {
+    "id": 2,
     "name" : "Katy",
-    "age" : "3"
+    "age" : "3",
+     "img": "images/cat2.png"
   },
   {
+    "id": 3,
     "name" : "Anya",
-    "age" : "5"
+    "age" : "5",
+     "img": "images/cat3.png"
   }
 ]
 }
